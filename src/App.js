@@ -1,8 +1,8 @@
 import React from "react";
 
 function Food(props) {
-    console.log(props);
-    return <h1>I like {props.fav}</h1>;
+    let { fav } = props;
+    return <h1>I like { fav }</h1>;
 }
 
 function App() {
@@ -10,6 +10,9 @@ function App() {
         <div>
             <h1>Hello</h1>
             <Food fav="kimchi"></Food>
+            <Food fav="ramen"></Food>
+            <Food fav="samgiopsal"></Food>
+            <Food fav="chukumi"></Food>
         </div>
     );
 }
