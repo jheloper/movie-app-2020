@@ -1,8 +1,13 @@
 import React from "react";
 
 function Food(props) {
-    let { name } = props;
-    return <h1>I like {name}</h1>;
+    let { name, picture } = props;
+    return (
+        <div>
+            <h2>I like {name}</h2>
+            <img src={picture} />
+        </div>
+    );
 }
 
 const foodILike = [
@@ -37,7 +42,7 @@ function App() {
     return (
         <div>
             {foodILike.map((dish) => (
-                <Food name={dish.name}></Food>
+                <Food name={dish.name} picture={dish.image}></Food>
             ))}
         </div>
     );
